@@ -35,21 +35,29 @@ const Update = () => {
     <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1, zIndex: 9999, bottom: 0, right: 0, position: 'fixed' }}>
       <SpeedDial
         ariaLabel="SpeedDial basic example"
-        sx={{ position: 'fixed', bottom: 40, right: 6 }}
+				sx={{ position: 'absolute', bottom: 40, right: 10 }}
         icon={<SpeedDialIcon />}
       >
-        <SpeedDialAction
-          key="Update"
-          icon={<RefreshIcon className={rotating ? "rotate" : ""} />}
-          slotProps={{ tooltip: { title: "Update Data" } }}
-          onClick={handleClick}
-        />
-        <SpeedDialAction
-          key="lang"
-          icon={<Language />}
-          slotProps={{ tooltip: { title: "Switch Language" } }}
-          onClick={handleLangClick}
-        />
+				<SpeedDialAction
+						key="Update"
+						icon={<RefreshIcon className={rotating ? "rotate" : ""} />}
+						slotProps={{
+							tooltip: {
+								title: "Refresh Data"
+							},
+						}}
+						onClick={handleClick}
+				/>
+				<SpeedDialAction
+						key="lang"
+						icon={<Language />}
+						slotProps={{
+							tooltip: {
+								title: "Switch Language"
+							},
+						}}
+						onClick={handleLangClick}
+				/>
       </SpeedDial>
     </Box>
   )
