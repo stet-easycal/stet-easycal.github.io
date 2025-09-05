@@ -37,7 +37,7 @@ const Trading = () => {
 		const num = parseFloat(coin);
 
 		if (!isNaN(num)) {
-			setTotal((num * stet * list[type].rate).toFixed(4).toString());
+			setTotal((num / stet * list[type].rate).toFixed(4).toString());
 		}
 	}, [type, aud, chy]);
 
@@ -47,7 +47,7 @@ const Trading = () => {
 		const num = parseFloat(value);
 
 		if (!isNaN(num)) {
-			setTotal((num * stet * list[type].rate).toFixed(4).toString());
+			setTotal((num / stet * list[type].rate).toFixed(4).toString());
 		}
 	};
 
@@ -57,7 +57,7 @@ const Trading = () => {
 		const num = parseFloat(value);
 
 		if (!isNaN(num)) {
-			setCoin((num / stet / list[type].rate).toFixed(4).toString());
+			setCoin((num * stet / list[type].rate).toFixed(4).toString());
 		}
 	};
 
