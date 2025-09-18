@@ -1,5 +1,4 @@
-# AUDCO
-[Page](https://audco.info/easycal/)
+# STET Token Easycal
 
 ## Getting started
 
